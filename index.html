@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Blocking Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>🕒 Time Blocking Scheduler</h1>
+
+        <!-- Calendar View -->
+        <div class="calendar-container" id="calendar-container">
+            <div class="calendar-header">
+                <button onclick="previousMonth()">&#10094;</button>
+                <h2 id="calendar-month"></h2>
+                <button onclick="nextMonth()">&#10095;</button>
+            </div>
+            <div class="calendar-grid" id="calendar-grid">
+                <!-- JavaScript will dynamically populate this grid with days -->
+            </div>
+        </div>
+
+        <!-- Scheduler View (Displayed after selecting a date) -->
+        <div class="scheduler-container" id="scheduler-container" style="display: none;">
+            <button onclick="showCalendar()" class="back-btn">&#10094; Back to Calendar</button>
+            <h2 id="selected-date-display"></h2>
+            <div class="scheduler-grid" id="scheduler-grid">
+                <!-- JavaScript will dynamically populate this grid with hourly time slots -->
+            </div>
+        </div>
+
+        <!-- Modal for Adding or Editing Tasks -->
+        <div class="modal" id="task-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Set Task</h2>
+                <input type="text" id="task-input" placeholder="Enter task description">
+                <label for="start-time">Start Time:</label>
+                <input type="time" id="start-time">
+                <label for="end-time">End Time:</label>
+                <input type="time" id="end-time">
+                <button onclick="saveTask()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
