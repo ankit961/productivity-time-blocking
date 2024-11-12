@@ -21,7 +21,7 @@ A **Time Blocking Scheduler** web app to help users organize their day effective
 
 ## Screenshots
 
-> _Add screenshots here if desired, such as images of the calendar view, scheduler view, and notification alerts._
+> _To Do
 
 ---
 
